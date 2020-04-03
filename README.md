@@ -15,7 +15,14 @@ int main()
 	char str[100];
 	printf("enter the string :");
 	int i=0;
-
-
+	while(i<10){
+	scanf("%c",&str[i]);
+	i++;}
+	int fd[2];	
+	write(fd[1],str,strlen(str));
+	printf("pid is %d for wiring in pipe - ",getpid());
+	int y=strlen(str);
+	printf("\n\n we have Written in pipe :%s\n",str);	
+	for(i=0;i<strlen(str);i++)
 
 
